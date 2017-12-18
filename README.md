@@ -26,11 +26,14 @@ To use all of the functionality of the library, you should have:
 Running
 ------------
 
-First,  make sure you input audio file is in .wav,flac format
-In linux you can convert your audio files with the following command
+First,  make sure your input audio file are in ``.wav ``,`` flac `` format
+
+* In linux you can convert your audio files with the following command
 ``ffmpeg -i inp0ut.* input.wav``
 
-if you use the google api there is a limit one the requests.
-So you have to split the audio.(here we split the file in 10 seconds parts)
-In linux you can do this with the command
+* If you use the google api there is a limit one the requests.
+* So you have to split the audio.(here we split the file in 10 seconds parts)
+* In linux you can do this with the command
 ``ffmpeg -i input.wav -f segment -segment_time 10 -c copy parts/%03d.wav``
+* Run the transcribe.py
+``python transcribe.py``  
